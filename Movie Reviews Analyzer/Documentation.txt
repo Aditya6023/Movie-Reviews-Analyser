@@ -1,0 +1,60 @@
+Here is the adjusted documentation for the Jupyter Notebook code:
+
+### Movie Reviews Sentiment Analysis
+
+This Jupyter Notebook performs sentiment analysis on movie reviews scraped from the IMDb website. It uses the BeautifulSoup library to extract the review text, the TextBlob library for sentiment analysis, and the scikit-learn library for machine learning tasks.
+
+### Dependencies
+
+The script requires the following Python libraries:
+
+- `requests`: for making HTTP requests to the IMDb website
+- `pandas`: for data manipulation and storage
+- `BeautifulSoup`: for parsing HTML content
+- `csv`: for writing data to a CSV file
+- `sklearn`: for machine learning tasks (train-test split, logistic regression, label encoding)
+- `textblob`: for sentiment analysis
+- `matplotlib`: for data visualization
+
+### Functionality
+
+The script performs the following steps:
+
+1. **Scrape Movie Reviews**: The script sends a GET request to the IMDb page for the movie code "tt27995594", code for movie "Munjya", and uses BeautifulSoup to extract the review text from the HTML content.
+
+2. **Preprocess Data**: The script creates a list of dictionaries, where each dictionary represents a review and its sentiment (either 'good' or 'bad'). The sentiment is determined by applying sentiment analysis using TextBlob on the review text.
+
+3. **Write Data to CSV**: The review data is then written to a CSV file named 'movie_reviews.csv'.
+
+4. **Load Dataset**: The script reads the CSV file and checks if the data is empty.
+
+5. **Preprocess Data**: The script preprocesses the data by applying sentiment analysis using TextBlob and encoding the labels using LabelEncoder.
+
+6. **Visualize Data**: The script visualizes the distribution of the encoded sentiment labels using a bar plot.
+
+7. **Split Data**: The script splits the data into training and testing sets using the `train_test_split` function from scikit-learn.
+
+8. **Train Model**: The script trains a logistic regression model on the training data using the `LogisticRegression` class from scikit-learn.
+
+9. **Evaluate Model**: The script evaluates the model's accuracy on the testing data using the `score` method.
+
+10. **Classify New Reviews**: The script classifies new reviews as either 'good' or 'bad' using the trained model.
+
+### Code Structure
+
+The code is organized as follows:
+
+1. **Imports**: The necessary libraries are imported at the beginning of the script.
+2. **Scrape Movie Reviews**: The code that sends the GET request to the IMDb page and extracts the review text using BeautifulSoup.
+3. **Preprocess Data**: The code that creates the list of dictionaries and writes the data to a CSV file.
+4. **Load Dataset**: The code that reads the CSV file and checks if the data is empty.
+5. **Preprocess Data**: The code that applies sentiment analysis and encodes the labels.
+6. **Visualize Data**: The code that creates the bar plot to visualize the distribution of the encoded sentiment labels.
+7. **Split Data**: The code that splits the data into training and testing sets.
+8. **Train Model**: The code that trains the logistic regression model.
+9. **Evaluate Model**: The code that evaluates the model's accuracy on the testing data.
+10. **Classify New Reviews**: The code that classifies new reviews using the trained model.
+
+### Usage
+
+To run the script, you can execute each cell individually in the Jupyter Notebook.
